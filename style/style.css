@@ -46,7 +46,7 @@ header a:hover {
 
 section {
     max-height: 1000px;
-    padding: 75px 0px 0px 30px;
+    padding: 70px 0px 180px 25px;
 }
 .bg-2white {
     max-height: 2000px;
@@ -61,15 +61,16 @@ section {
     background-position: center center;
 }
 
-.bg-flower p {
+.bg-flower > p, .bg-paper > p {
     background-color: rgba(0, 0, 0, 0.473);
     color: white;
 }
 
 section p {
     display: block;
-    width: 50%;
+    width: 42%;
     font-family: var(--main-font);
     font-size: min(3.5em, 3.5vw);
     line-height: 2em;
+    padding: 5px 5px 5px 5px;
 }
