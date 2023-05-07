@@ -3,102 +3,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
 :root {
-    --main-font: 'Sriracha', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    --secondary-font: Verdana, Geneva, Tahoma, sans-serif;
-    --title-font: 'Passion One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
 }
 
 * {
-    margin: 0px;
     padding: 0px;
+    margin: 0px;
 }
-body {
-    max-width: 100%;
-    
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
 }
 
 header {
-    color: white;
     background-color: black;
-    padding: 50px;
+    color: white;
     text-align: center;
 }
 
-header h1 {
-    font-family: var(--title-font);
+header > h1 {
+    padding-top: 50px;
     font-variant: small-caps;
-    font-size: min(160px, 10vw);
+    font-family: var(--fonte2);
+    font-size: 10vw;
 }
 
-header p {
-    font-family: var(--secondary-font);
+header > p {
+    padding-bottom: 50px;
 }
 
-header a {
-    color: currentColor;
-    font-weight: bolder;
+header a, footer a {
+    color: white;
     text-decoration: none;
+    font-weight: bolder;
 }
 
-header a:hover {
+header a:hover, footer a:hover {
     text-decoration: underline;
 }
 
 section {
-    max-height: 1000px;
-    padding: 70px 0px 180px 25px;
-}
-.bg-2white {
-    max-height: 2000px;
-    background-color: white;
-}
-
-.bg-flower {
-    background-image: url('../imagens/background001.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding-bottom: 85px;
-}
-
-.bg-flower > p, .bg-paper > p {
-    background-color: rgba(0, 0, 0, 0.473);
-    color: white;
-}
-
-.bg-paper {
-    background-image: url('../imagens/background002.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding-bottom: 85px;
-}
-
-section p {
-    display: block;
-    width: 43%;
-    font-family: var(--main-font);
-    font-size: min(3.5em, 3.5vw);
+    padding-top: 10%;
+    padding-bottom: 10%;
     line-height: 2em;
-    padding: 5px 0px 5px 5px;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section.normal {
+    background-color: white;
+    color: black
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.507);
+}
+
+section.imagem > p {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.253);
+    padding: 5px;
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background: black url('../imagens/background001.jpg') right center no-repeat fixed;
+    background-size: cover;
+}
+
+section#img02 {
+    background: black url('../imagens/background002.jpg') right center no-repeat fixed;
+    background-size: cover;
 }
 
 footer {
-    color: white;
     background-color: black;
-    font-family: var(--secondary-font);
-    padding: 10px;
+    color: white;
     text-align: center;
-}
-
-footer a {
-    color: currentColor;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    padding: 10px;
 }
